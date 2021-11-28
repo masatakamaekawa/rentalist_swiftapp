@@ -6,14 +6,18 @@
 //
 
 import UIKit
+import WebKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var rentalist: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        let url = URL(string:  "http://localhost")
+        let request = URLRequest(url: url!)
+        rentalist.load(request)
     }
-
-
 }
 
